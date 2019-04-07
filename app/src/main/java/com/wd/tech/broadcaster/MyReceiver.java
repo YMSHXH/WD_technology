@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.wd.tech.activity.Test2Activity;
-import com.wd.tech.activity.TestActivity;
 
 import org.json.JSONObject;
 
@@ -41,7 +40,7 @@ public class MyReceiver extends BroadcastReceiver {
 
         } else if (JPushInterface.ACTION_MESSAGE_RECEIVED.equals(intent.getAction())) {
             Log.d(TAG, "接受到推送下来的自定义消息");
-            Intent intentzdy = new Intent(context, TestActivity.class);
+            Intent intentzdy = new Intent(context, Test2Activity.class);
             intentzdy.putExtra("ZDY_MESG",bundle);
             intentzdy.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(intentzdy);
